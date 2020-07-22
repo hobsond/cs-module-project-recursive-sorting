@@ -7,12 +7,12 @@ def binary_search(arr, target, start, end):
     
     if start != len(arr):
         if arr[0] == target:
-            return 1
+            return arr[0]
         else:
             x = start + 1
             return binary_search(arr[start:],target,x,end )
     else:
-        return False
+        return -1
         
         
             
