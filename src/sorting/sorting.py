@@ -15,21 +15,12 @@ def merge(arrA, arrB):
 def merge_sort(arr):
     # Your code here
     # first i will check if the arr has more than one value
-    if len(arr) == 1:
-    # if it does not return 
-        return
-    # check if value is even'
-    # if its even split the array evenly
-    
-    
-    # else split and give oneside an extra value
-    # return recurssive(left) return recursive(right)
-   
-    arr = mergedleft + mergedright
-
-
+    if len(arr) > 1:
+        left=merge_sort(arr[0:len(arr) //2])
+        right = merge_sort(arr[len(arr)//2:])
+        
+        arr = merge(left,right)
     return arr
-
 # STRETCH: implement the recursive logic for merge sort in a way that doesn't 
 # utilize any extra memory
 # In other words, your implementation should not allocate any additional lists 
